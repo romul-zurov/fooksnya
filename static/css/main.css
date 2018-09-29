@@ -16,12 +16,13 @@ html {
 
 body {
     font-family: 'main_font', sans-serif;
+    color:#fefefe;
 
     background-image: url("/static/img/background.jpg");
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'main_font', sans-serif;
+    font-weight: 500;
     text-align: center;
-    color:#fefefe;
 }
