@@ -1,14 +1,3 @@
-/* font-family: "CenturyGothicRegular"; */
-@font-face {
-    font-family: "main_font";
-    src: url("/static/fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
-    src: url("/static/fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
-    url("/static/fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
-    url("/static/fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
 html {
     font-family: 'main_font', sans-serif;
     font-variant: small-caps;
