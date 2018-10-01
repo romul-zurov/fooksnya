@@ -4,6 +4,33 @@ server {
     server_name fooks.info;
     charset utf-8;
 
+    access_log /var/log/nginx/fooksnya.access.log;
+    error_log /var/log/nginx/fooksnya.error.log;
+
+    location /static {
+        alias /home/fooks/fooksnya/static/;
+    }
+
+    location / {
+        proxy_pass http://0.0.0.0:8901;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+server {
+
+    listen 443 ssl;
+    server_name fooks.info;
+    charset utf-8;
+    ssl on;
+    ssl_certificate /root/.acme.sh/fooks.info/fooks.info.cer;
+    ssl_certificate_key /root/.acme.sh/fooks.info/fooks.info.key;
+
+    access_log /var/log/nginx/fooksnya.access.log;
+    error_log /var/log/nginx/fooksnya.error.log;
+
     location /static {
         alias /home/fooks/fooksnya/static/;
     }
