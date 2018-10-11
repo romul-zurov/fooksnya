@@ -17,9 +17,11 @@ app.static('/static', './static')
 async def test(request):
     return {'info': 'в разработке :)'}
 
+@app.route('/vk-callback')
+async def test(request):
+    print(request.args)
+    return json_response('')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8901)
-
-
-# >= <= :: == ~=
