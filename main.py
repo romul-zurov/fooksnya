@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 
 from sanic.response import json as json_response
@@ -20,3 +20,6 @@ async def test(request):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8901)
+
+
+# >= <= :: == ~=
