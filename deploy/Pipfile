@@ -10,6 +10,7 @@ sanic = "*"
 sanic_session = "*"
 sanic-jinja2 = "*"
 alchimia = "*"
+aiohttp = "*"
 
 [requires]
 python_version = "3.6"
